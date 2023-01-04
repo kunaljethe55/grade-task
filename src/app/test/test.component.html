@@ -1,0 +1,36 @@
+<form [formGroup]="gradeform">
+    <div class="row shadow height ">
+        <div class="col-md-3 ">
+
+            <input class="text" name="grade" placeholder="grades" formControlName="grade" class="form-control">
+            <div class="text text-danger" *ngIf="gradeform.invalid && gradeform.touched">
+                Grade name is required.
+            </div>
+        </div>
+        <span class="col-md-6 ">
+            <button class="btn btn-primary ml-5" type="submit" (click)="submit()">save</button>
+            <button class="btn btn-success " type="submit" (click)="update()">update</button>
+        </span>
+    </div>
+</form>
+>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>sr.no</th>
+            <th>Grade</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of storedata  index as r ">
+            <td>{{r+1}}</td>
+            <td>{{item.grade}}</td>
+            <td><button (click)="edit(item)"><i class="bi bi-pen"></i></button>
+                <button (click)="delete(item)"><i class="bi bi-archive"></i></button>
+            </td>
+
+        </tr>
+    </tbody>
+
+</table>

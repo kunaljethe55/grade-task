@@ -1,0 +1,16 @@
+{
+  "gradedata": [
+    {
+      "grade": "grade2",
+      "id": 2
+    },
+    {
+      "grade": "grade4",
+      "id": 4
+    },
+    {
+      "grade": "grade5",
+      "id": 5
+    }
+  ]
+}
